@@ -438,11 +438,26 @@ body {
 }
 
 @media (max-width:576px) {
+  .slider-container h1 span{
+    font-size: 3rem;
+  }
   .slider-container h1 {
-    font-size: 2.5em;
+    font-size: 2.3em;
   }
 }
-
+@media (max-width:768px) {
+  .slider-container h1 span{
+    font-size: 3rem;
+  }
+  .slider-container h1 {
+    font-size: 2.3em;
+  }
+}
+@media (max-width:992px) {
+  .slider-container h1 {
+    font-size: 4em;
+  }
+}
 /* ================================== End Header ================================== */
 
 /* ================================== Start Our-Team section================================== */
@@ -808,7 +823,47 @@ body {
   .swiper-pagination-bullet:not(.swiper-pagination-bullet-active){
     opacity: 0.7;
   }
-  @media (max-width:576px) {
+  .opinions-slide,.opinions-slide-container{
+    display: none;
+  }
+  
+  .logo-expertise{
+    position: relative;
+    width: calc(94%/3);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:  0.5%;
+    margin-right: 0.5%;
+    margin-bottom: 1%;
+  }
+  .our-expertise-mobile{
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    justify-content: center;
+  }
+  .logo-expertise img{
+    position: absolute;
+    max-width: 98%;
+  }
+  .logo-expertise::before{
+    content: "";
+    position: absolute;
+    /* z-index: -9999; */
+    width: 100%;
+    height: 100px;
+    background-color: white;
+  }
+  @media (min-width:768px) {
+.opinions-slide,.opinions-slide-container{
+  display: block;
+}
+.our-expertise-mobile{
+  display:none;
+}
+  }
+  @media (max-width:768px) {
     .opinions-title{
       font-size: 36px;
     }

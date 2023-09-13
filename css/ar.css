@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
 
 body {
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Tajawal', sans-serif;
   background-color: #050505;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -60,9 +60,9 @@ body {
   height: 100vh !important;
   width: 100%;
   position: fixed;
-  left: 50%;
+  right: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(50%, -50%);
   z-index: 100;
   overflow: hidden;
 }
@@ -76,9 +76,9 @@ body {
 
 .perloader-logo {
   position: absolute;
-  left: 50%;
+  right: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(50%,-50%);
   visibility: hidden;
   animation: perloader-logo 3s 1s ease-in-out infinite;
 }
@@ -124,7 +124,7 @@ body {
   border-radius: 50%;
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  left: 30px;
   transition: background-color .3s,
     opacity .5s, visibility .5s;
   opacity: 0;
@@ -156,7 +156,7 @@ body {
 
 .lang {
   position: fixed;
-  right: 150px;
+  left: 150px;
   top: 25px;
   visibility: hidden;
 }
@@ -168,7 +168,7 @@ body {
 .site-header {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   z-index: 100;
   -webkit-transition: background-color 400ms ease-in-out;
@@ -185,15 +185,15 @@ body {
     width: 100% !important;
     height: 260px !important;
     background-color: rgba(43, 47, 53, 0.95) !important;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 50%;
+    transform: translateX(50%);
   }
 
   .navbar-nav-bg::before {
     content: "";
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 50%;
+    transform: translateX(50%);
     width: 108%;
     height: 260px !important;
     background-color: rgba(43, 47, 53, 0.95) !important;
@@ -220,7 +220,7 @@ body {
 }
 
 .nav-item :not(.lang) {
-  margin-right: 31px;
+  margin-left: 31px;
 }
 
 .nav-item>:last-child span {
@@ -237,7 +237,7 @@ body {
   height: 1.2px;
   border-radius: 8px;
   background-color: #E78E2A;
-  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .nav-item:hover a {
@@ -266,17 +266,17 @@ body {
 
 @media(max-width:1200px) {
   .lang {
-    right: 40px;
+    left: 40px;
   }
 }
 
 @media(max-width:992px) {
   .lang {
     position: fixed;
-    left: 50%;
+    right: 50%;
     top: 20px;
-    transform: translateX(-50%);
-    right: unset;
+    transform: translateX(50%);
+    left: unset;
   }
 
   .navbar-nav {
@@ -299,7 +299,7 @@ body {
 @media(max-width:576px) {
   .lang {
     position: absolute;
-    left: 80%;
+    right: 80%;
     top: -52px;
   }
 }
@@ -338,7 +338,7 @@ body {
   position: absolute;
   opacity: 0.3;
   top: 0;
-  left: 0;
+  right: 0;
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -350,7 +350,7 @@ body {
   background-position: center center;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   opacity: 0;
   height: 100%;
   width: 100%;
@@ -363,10 +363,10 @@ body {
   height: 100%;
   width: 100%;
   top: 0;
-  left: 0;
+  right: 0;
   position: absolute;
   background-color: transparent;
-  background-image: linear-gradient(180deg, #00000000 0%, #050505 98%);
+  background-image: linear-gradient(-180deg, #00000000 0%, #050505 98%);
   opacity: 1;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
@@ -392,7 +392,7 @@ body {
 .controls-container {
   position: absolute;
   top: 50%;
-  right: 10px;
+  left: 10px;
   display: flex;
   flex-direction: column;
   transform: translateY(-50%);
@@ -424,10 +424,10 @@ body {
   height: 100%;
   width: 100%;
   top: 0;
-  left: 0;
+  right: 0;
   position: absolute;
   background-color: transparent;
-  background-image: linear-gradient(180deg, #00000000 0%, #050505 98%);
+  background-image: linear-gradient(-180deg, #00000000 0%, #050505 98%);
   opacity: 1;
   /* transition: background 0.3s, border-radius 0.3s, opacity 0.3s; */
 }
@@ -627,7 +627,7 @@ body {
   height: 28.125rem;
   overflow: hidden;
   border-radius: 0.625rem;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  box-shadow: -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
   margin: 20px auto;
   padding: 0;
 }
@@ -651,7 +651,7 @@ body {
   align-self: flex-end;
   height: 55%;
   padding: 12% 1.25rem 1.875rem;
-  background: linear-gradient(180deg,
+  background: linear-gradient(-180deg,
       hsla(0, 0%, 0%, 0) 0%,
       hsla(0, 0%, 0%, 0.3) 10%,
       hsl(0, 0%, 0%) 100%);
@@ -675,7 +675,7 @@ body {
   height: 0.3125rem;
   width: calc(100% + 1.25rem);
   bottom: calc((1.25rem - 0.5rem) * -1);
-  left: -1.25rem;
+  right: -1.25rem;
   background-color: var(--brand-color);
 }
 
@@ -707,7 +707,7 @@ body {
   transform: scaleX(0);
   transition: opacity 1000ms ease-in, transform 500ms ease-out;
   transition-delay: 500ms;
-  transform-origin: right;
+  transform-origin: left;
 }
 
 .card__description {
@@ -758,7 +758,7 @@ body {
 .card:focus-within .card__title::after {
   opacity: 1;
   transform: scaleX(1);
-  transform-origin: left;
+  transform-origin: right;
   transition: opacity 500ms ease-in, transform 500ms ease-in;
   transition-delay: 500ms;
 }
@@ -819,7 +819,7 @@ body {
 .landing-counter {
   width: 100%;
   min-height: 173px;
-  background: linear-gradient(91.13deg,
+  background: linear-gradient(-91.13deg,
       rgba(255, 255, 255, 0.12) 0.15%,
       rgba(255, 255, 255, 0.02) 100%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
@@ -843,14 +843,14 @@ body {
 }
 
 .number-of-clients {
-  border-left: 1px solid rgba(255, 255, 255, 0.12);
   border-right: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .total-orders> :nth-child(2),
 .number-of-clients> :nth-child(2),
 .number-of-services> :nth-child(2) {
-  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .total-orders> :nth-child(2)>p,
@@ -861,7 +861,7 @@ body {
   line-height: 27px;
   color: #ffffff;
   text-align: center;
-  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .counter {
@@ -930,7 +930,7 @@ textarea:valid~label {
 }
 
 .styled-input {
-  float: left;
+  float: right;
   width: 293px;
   margin: 1rem 0;
   position: relative;
@@ -954,7 +954,7 @@ textarea:valid~label {
   padding: 0.7rem 30px 1rem 30px;
   position: absolute;
   top: 10px;
-  left: 0;
+  right: 0;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   pointer-events: none;
@@ -1001,7 +1001,7 @@ textarea {
 }
 
 .submit-btn {
-  float: left;
+  float: right;
   padding: 7px 35px;
   border-radius: 60px;
   display: inline-block;
@@ -1062,35 +1062,35 @@ footer {
 
 .location p {
   margin-bottom: 0;
-  padding-left: 4px;
+  padding-right: 4px;
   color: #eee;
 }
 
 .location {
   display: flex;
   align-items: center;
-  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .social-media-links {
   position: relative;
-  margin-left: 130px;
+  margin-right: 130px;
 }
 
 .social-media-links-ul {
   display: flex;
-  padding-left: 0;
+  padding-right: 0;
   align-items: center;
 }
 
 .social-media-links h3 {
-  padding-left: 8px;
+  padding-right: 8px;
   color: #eee;
 }
 
 .social-media-links-ul li {
   list-style: none;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 .social-media-links-ul li a img{
   width: 35px;
@@ -1123,7 +1123,7 @@ footer {
 
   .social-media-links {
     margin-top: 30px;
-    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -1201,4 +1201,4 @@ footer {
     margin-top: 50px;
     flex-direction: column-reverse;
   }
-}
+}   

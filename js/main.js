@@ -12,7 +12,7 @@ window.addEventListener(("load"), _ =>{
         navbar.style.display="block"
         slider_container.style.display="flex"
         lang.style.visibility="visible"
-          }, 5000);
+          }, 4000);
 })
 
 let navbar_nav = document.querySelector(".navbar-nav")
@@ -94,3 +94,42 @@ btn.addEventListener('click', function(e) {
   e.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// Start Swiper
+var swiper = new Swiper(".slide-content-1", {
+  slidesPerView: 8,
+  spaceBetween: 0,
+  loop: true,
+  centerSlide: true,
+  fade: true,
+  grabCursor: true,
+  pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+  },
+  navigation: {
+      nextEl: ".swiper-btn-next",
+      prevEl: ".swiper-btn-prev",
+  },
+  autoplay: {
+      delay: 3000,
+  },
+  breakpoints: {
+      0: {
+          slidesPerView: 2,
+      },
+      768: {
+          slidesPerView: 6,
+      },
+      992: {
+          slidesPerView: 6,
+          // autoplay: false, 
+          // loop: false,
+      },
+      1200: {
+          slidesPerView: 8,
+      },
+  },
+});
+

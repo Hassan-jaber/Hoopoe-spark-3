@@ -117,7 +117,7 @@ var swiper = new Swiper(".slide-content-1", {
   },
   breakpoints: {
       0: {
-          slidesPerView: 2,
+          slidesPerView: 3,
       },
       768: {
           slidesPerView: 4,

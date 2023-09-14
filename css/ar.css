@@ -651,12 +651,21 @@ body {
   align-self: flex-end;
   height: 55%;
   padding: 12% 1.25rem 1.875rem;
-  background: linear-gradient(-180deg,
+  /* background: linear-gradient(-180deg,
       hsla(0, 0%, 0%, 0) 0%,
       hsla(0, 0%, 0%, 0.3) 10%,
-      hsl(0, 0%, 0%) 100%);
+      hsl(0, 0%, 0%) 100%); */
 }
-
+.card:hover .card__content{
+  width: 100%;
+    background: linear-gradient(180deg,
+      hsla(0, 0%, 0%, 0) 0%,
+      hsla(0, 0%, 0%, 0.3) 10%,
+      hsl(0, 0%, 0%) 100%) !important;
+      text-align: center;
+      justify-content: center;
+      flex-direction: row;
+}
 .card__content--container {
   --flow-space: 1.25rem;
 }
@@ -796,8 +805,12 @@ body {
   z-index: -9999;
   width: 150px;
   height: 100px;
-  border: 1px solid #272828;
+  background-color: white;
   border-radius: 8px;
+}
+.swiper-slide img{
+  max-width: 70%;
+  max-height: 70%;
 }
 .swiper-pagination-bullet-active{
     background-color: #E78E2A;
@@ -809,49 +822,28 @@ body {
   .swiper-pagination-bullet:not(.swiper-pagination-bullet-active){
     opacity: 0.7;
   }
-  .opinions-slide,.opinions-slide-container{
-    display: none;
-  }
   
-  .logo-expertise{
-    position: relative;
-    width: calc(94%/3);
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left:  0.5%;
-    margin-right: 0.5%;
-    margin-bottom: 1%;
-  }
-  .our-expertise-mobile{
-    padding-left: 0.5%;
-    padding-right: 0.5%;
-    justify-content: center;
-  }
-  .logo-expertise img{
-    position: absolute;
-    max-width: 98%;
-  }
-  .logo-expertise::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    border: 1px solid #272828;
-    border-radius: 8px;
-  }
-  @media (min-width:768px) {
-.opinions-slide,.opinions-slide-container{
-  display: block;
-}
-.our-expertise-mobile{
-  display:none;
-}
-  }
   @media (max-width:768px) {
     .opinions-title{
       font-size: 36px;
+    }
+  }
+  @media(max-width:576px){
+    .swiper-slide,.swiper-slide::before{
+      width: 110px;
+      height: 95px;
+    }
+    .swiper-slide img{
+      max-width: 100%;
+    }
+    .swiper-slide:nth-of-type(12) img{
+     max-width: 100px;
+    }
+    .swiper-slide:nth-of-type(10) img,.swiper-slide:nth-of-type(11) img{
+      max-width: 80%;
+    }
+    .swiper-slide:nth-of-type(18) img{
+      max-width: 75%;
     }
   }
 /*  End opinions Section  */
